@@ -9,5 +9,6 @@ public interface IApplicationDbContext
 
     DbSet<TodoItem> TodoItems { get; }
 
+    DbSet<TEntity> GetEntity<TEntity>() where TEntity : class;
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }
