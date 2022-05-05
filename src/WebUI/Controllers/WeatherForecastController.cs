@@ -1,0 +1,14 @@
+﻿using CleanArchitectureTemplate.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+using Microsoft.AspNetCore.Mvc;
+
+namespace CleanArchitectureTemplate.WebUI.Controllers;
+
+public class WeatherForecastController : ApiControllerBase
+{
+    [HttpGet]
+    public async Task<IEnumerable<WeatherForecast>> Get()
+    {
+        throw new NotImplementedException();
+        //return await Mediator.Send(new GetWeatherForecastsQuery());
+    }
+}
